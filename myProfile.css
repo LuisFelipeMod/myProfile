@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+* {
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #010f1c;
+}
+
+.profile-image {
+  width: 351px;
+  height: 634px;
+  border-radius: 40px;
+  filter: drop-shadow(0px 0px 40px #46b0ea);
+}
+
+.father {
+  display: flex;
+}
+
+.flip-card {
+  margin-left: 12%;
+  margin-top: 17vh;
+  width: 350px;
+  height: 634px;
+  perspective: 1000px;
+  border: 16px solid rgb(255, 255, 255);
+  border: 16px solid rgba(255, 255, 255, 0.3);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+  border-radius: 56px;
+}
+
+/*        Este container é necessário         
+    para posicionar o lado frontal e traseiro  */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Responsável por fazer a imagem rotacionar */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Posição do lado da frente e de trás do Card*/
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 40px;
+}
+
+/*   */
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.description {
+  text-align: center;
+  margin-top: 90px;
+  line-height: 2.2;
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 56px;
+  margin-left: 500px;
+  margin-top: 200px;
+  width: 640px;
+  height: 612px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.social-icons:hover {
+  opacity: 0.7;
+}
